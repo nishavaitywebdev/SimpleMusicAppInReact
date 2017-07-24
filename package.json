@@ -1,0 +1,27 @@
+{
+  "name": "simplemusicapp",
+  "version": "1.0.0",
+  "description": "App to display content to users using ReactJS from Spotify using their api",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --hot"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nishavaitywebdev/SimpleMusicAppInReact.git"
+  },
+  "author": "Nisha Vaity",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nishavaitywebdev/SimpleMusicAppInReact/issues"
+  },
+  "homepage": "https://github.com/nishavaitywebdev/SimpleMusicAppInReact#readme",
+  "dependencies": {
+    "react": "^15.6.1",
+    "react-bootstrap": "^0.31.1",
+    "react-dom": "^15.6.1",
+    "spotify-web-api-node": "^2.4.0",
+    "webpack": "^3.3.0",
+    "webpack-dev-server": "^2.5.1"
+  }
+}
