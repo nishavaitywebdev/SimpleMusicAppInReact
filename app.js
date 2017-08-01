@@ -5,7 +5,7 @@ import $http from 'jquery';
 export class FilterableHotelsList extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {hotels: []};
+    this.state = {hotels: undefined,};
   }
 
   componentWillMount() {
@@ -44,11 +44,18 @@ export class FilterableHotelsList extends React.Component {
   }
 
   render(){
+    const myStyle={
+      width: '100%',
+      height: '800px',
+      margin: 0,
+      padding: 0,
+      overflow: 'hidden',
+      backgroundColor: '#00acec',
+    }
     return (
-      <div>
+      <div style={myStyle}>
         <SearchBar />
-        <HotelsList hotels={this.state.hotels} />
-        // <HotelsList hotels={this.props.hotels} />
+        <HotelsList />
       </div>
     );
   }
@@ -68,6 +75,10 @@ export class HotelsList extends React.Component {
   render(){
     var rows = [];
     var lastCategory = null;
+    // if(this.state.hotels.length === 0){
+    //  return (<p>Not yet rendered</p>); //return false or a <Loader/> when you don't have anything in your message[]
+    // }
+    /*console.log(this.state.hotels.length);
     this.state.hotels.forEach(
       function (hotel) {
         if (hotel.category !== lastCategory) {
@@ -76,7 +87,7 @@ export class HotelsList extends React.Component {
         rows.push(<HotelRow hotel = {hotel} key = {hotel.name} />);
         lastCategory = hotel.category;
       }
-    );
+    );*/
     return (
       <ul>
         {rows}
