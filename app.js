@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import $http from 'jquery';
+import BackgroundSineWave from './BackgroundSineWave';
 
 export class FilterableHotelsList extends React.Component {
   constructor(props) {
@@ -56,6 +57,7 @@ export class FilterableHotelsList extends React.Component {
       <div style={myStyle}>
         <SearchBar />
         <HotelsList />
+        <BackgroundSineWave />
       </div>
     );
   }
